@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <section class="section">
+                    <div class="columns">
+                        <div class="column is-8 is-offset-2">
+                            <h1 class="title">Category List</h1>
+                            {% for post in category %}
+                                <div class="content is-medium">
+                                        <p><small> <a href="{% url 'category_detail' post.slug %}">{{ post.slug }}</a></small></p>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+{% endblock %}
