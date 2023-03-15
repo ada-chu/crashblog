@@ -34,4 +34,7 @@ urlpatterns = [
     path('category/', category_page, name='category_page'),
     path('', include('blog.urls')),
     path('', frontpage, name='frontpage'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
