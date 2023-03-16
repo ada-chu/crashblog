@@ -19,7 +19,7 @@
                             <h1 class="title">{{ post.title }}</h1>
                             <h2 class="subtitle is-4">{{ post.created_at|timesince }} ago</h2>
                             <p><strong>{{ post.intro }}</strong></p>
-                            <p>{{ post.body }}</p>
+                            <p>{{ post.body|safe }}</p>
 
                             <p><small>Category: <a href="{% url 'category_detail' post.category.slug %}">{{ post.category }}</a></small></p>
 
