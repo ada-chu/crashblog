@@ -19,7 +19,7 @@
                                             <img src="{{ post.image.url }}">
                                         </figure>
                                         {% endif %}
-                                        <p>{{ post.intro }}</p>
+                                        <p>{{ post.intro |safe }}</p>
                                     </a>
                                 </div>
                                 <hr>
